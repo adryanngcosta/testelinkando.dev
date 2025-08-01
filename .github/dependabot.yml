@@ -9,9 +9,9 @@ updates:
       time: "09:00"
     open-pull-requests-limit: 10
     reviewers:
-      - "seu-usuario"
+      - "adryanngcosta"
     assignees:
-      - "seu-usuario"
+      - "adryanngcosta"
     commit-message:
       prefix: "chore"
       include: "scope"

@@ -51,7 +51,7 @@ Uma aplicação moderna e elegante para encurtamento de links com autenticação
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/linkando.dev.git
+git clone https://github.com/adryanngcosta/linkando.dev.git
 cd linkando.dev
 ```
 
@@ -228,6 +228,6 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 **Desenvolvido com ❤️ para [linkando.dev](https://linkando.dev)**
 
-[![GitHub stars](https://img.shields.io/github/stars/seu-usuario/linkando.dev?style=social)](https://github.com/seu-usuario/linkando.dev)
-[![GitHub forks](https://img.shields.io/github/forks/seu-usuario/linkando.dev?style=social)](https://github.com/seu-usuario/linkando.dev)
-[![GitHub issues](https://img.shields.io/github/issues/seu-usuario/linkando.dev)](https://github.com/seu-usuario/linkando.dev/issues)
+[![GitHub stars](https://img.shields.io/github/stars/adryanngcosta/linkando.dev?style=social)](https://github.com/adryanngcosta/linkando.dev)
+[![GitHub forks](https://img.shields.io/github/forks/adryanngcosta/linkando.dev?style=social)](https://github.com/adryanngcosta/linkando.dev)
+[![GitHub issues](https://img.shields.io/github/issues/adryanngcosta/linkando.dev)](https://github.com/adryanngcosta/linkando.dev/issues)

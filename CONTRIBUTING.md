@@ -8,11 +8,11 @@ Obrigado por considerar contribuir com o **linkando.dev**! 🎉
 ```bash
 # Fork o repositório no GitHub
 # Clone seu fork
-git clone https://github.com/seu-usuario/linkando.dev.git
+git clone https://github.com/adryanngcosta/linkando.dev.git
 cd linkando.dev
 
 # Adicione o repositório original como upstream
-git remote add upstream https://github.com/original-owner/linkando.dev.git
+git remote add upstream https://github.com/adryanngcosta/linkando.dev.git
 ```
 
 ### 2. Configure o Ambiente
