@@ -1,14 +1,14 @@
 blank_issues_enabled: false
 contact_links:
   - name: 📚 Documentação
-    url: https://github.com/adryanngcosta/linkando.dev#readme
+    url: https://github.com/adryanngcosta/testelinkando.dev#readme
     about: Leia a documentação do projeto
   - name: 💬 Discussões
-    url: https://github.com/adryanngcosta/linkando.dev/discussions
+    url: https://github.com/adryanngcosta/testelinkando.dev/discussions
     about: Participe das discussões da comunidade
   - name: 🐛 Bug Report
-    url: https://github.com/adryanngcosta/linkando.dev/issues/new?template=bug_report.md
+    url: https://github.com/adryanngcosta/testelinkando.dev/issues/new?template=bug_report.md
     about: Reporte um bug encontrado
   - name: 💡 Feature Request
-    url: https://github.com/adryanngcosta/linkando.dev/issues/new?template=feature_request.md
+    url: https://github.com/adryanngcosta/testelinkando.dev/issues/new?template=feature_request.md
     about: Sugira uma nova funcionalidade 
