@@ -220,33 +220,50 @@ if (hasValidGoogleCredentials) {
 
 if (hasValidGitHubCredentials) {
   const GitHubStrategy = require('passport-github2').Strategy;
-  
+
   passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
     callbackURL: "/auth/github/callback"
   }, async (accessToken, refreshToken, profile, done) => {
     try {
-      // Check if user exists
-      let user = await User.findOne({ providerId: profile.id.toString(), provider: 'github' });
-      
+      // mesmo esquema do Google
+      let user = await User.findOne({ providerId: profile.id, provider: 'github' });
+
       if (!user) {
-        // Create new user
         user = new User({
           username: profile.username,
-          email: profile.emails[0]?.value || `${profile.username}@github.com`,
+          email: profile.emails?.[0]?.value || '',
           provider: 'github',
-          providerId: profile.id.toString(),
-          avatar: profile.photos[0]?.value
+          providerId: profile.id,
+          avatar: profile.photos?.[0]?.value
         });
         await user.save();
       }
-      
+
       return done(null, user);
     } catch (error) {
       return done(error, null);
     }
   }));
+
+  // Rotas de autenticação
+  app.get('/auth/github',
+    passport.authenticate('github', { scope: ['user:email'] })
+  );
+
+  app.get('/auth/github/callback',
+    passport.authenticate('github', { failureRedirect: '/login' }),
+    (req, res) => {
+      const token = generateToken(req.user);
+      res.cookie('token', token, { 
+        httpOnly: true, 
+        secure: false, // true em produção
+        maxAge: 7 * 24 * 60 * 60 * 1000
+      });
+      res.redirect('http://localhost:5001/dashboard');
+    }
+  );
 }
 
 // Authentication middleware
@@ -312,7 +329,7 @@ if (hasValidGoogleCredentials) {
         secure: false, // Set to true in production
         maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
       });
-      res.redirect('http://localhost:3000/dashboard');
+      res.redirect('http://localhost:5001/dashboard');
     }
   );
 }
